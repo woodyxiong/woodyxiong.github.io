@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            一句话了解设计模式 | 
+        
+        魁爷的黑作坊
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="生活,编程,玩">
+    <meta name="keywords" content="后端,PHP,全栈,Web,自学编程,学习分享,玩,自由,玄学,设计模式">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="魁爷的黑作坊">
+    <meta name="msapplication-starturl" content="https://blog.gfkui.com/2019/03/27/一句话了解设计模式/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="魁爷的黑作坊">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="MNB77WwXXY">
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://blog.gfkui.com/2019/03/27/一句话了解设计模式/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="一句话了解设计模式 | 魁爷的黑作坊">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="生活,编程,玩">
+    <meta property="og:article:tag" content="玄学"> <meta property="og:article:tag" content="设计模式"> 
+
+    
+        <meta property="article:published_time" content="Wed Mar 27 2019 22:52:44 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 22 2020 16:05:54 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://blog.gfkui.com/2019/03/27/一句话了解设计模式/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://blog.gfkui.com/2019/03/27/一句话了解设计模式/index.html",
+    "headline": "一句话了解设计模式",
+    "datePublished": "Wed Mar 27 2019 22:52:44 GMT+0800",
+    "dateModified": "Sun Nov 22 2020 16:05:54 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "WoodyXiong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/logo.jpg"
+        },
+        "description": "淡泊明志，宁静致远"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "魁爷的黑作坊",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",玄学,设计模式后端,PHP,全栈,Web,自学编程,学习分享,玩,自由",
+    "description": "生活,编程,玩",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-71785931-2', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?ef419ee57c7007748e3ffd3f542a9a24';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设计模式的7大基本原则"><span class="post-toc-number">2.</span> <span class="post-toc-text">设计模式的7大基本原则</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开闭原则"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">开闭原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#里氏代换原则"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">里氏代换原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#依赖倒置原则"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">依赖倒置原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#接口隔离原则"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">接口隔离原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#迪米特原则-最少知道原则"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">迪米特原则 | 最少知道原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#合成复用原则"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">合成复用原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#单一职责原则"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">单一职责原则</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#具体到所有设计模式"><span class="post-toc-number">3.</span> <span class="post-toc-text">具体到所有设计模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建型模式"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">创建型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#结构型模式"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">结构型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#行为型模式"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">行为型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#J2EE-模式"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">J2EE 模式</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://tencentcdn.gfkui.cn/19/5/8/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.jpg)">
+    
+            <p class="article-headline-p">
+                一句话了解设计模式
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/logo.jpg" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>WoodyXiong</strong>
+        <span>3月 27, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0UlEQVR42u3aW24jMQwEQN//0rsXWI+7qZmFLdV8BbEjsxQgDB+vP0c+L2xsbGxsbGxsbOyvZL/i5x8Hle9592py2vU7k5ixsbGx92Z/+NO/wH53wjUvYbcxY2NjY5/Afse4/sh3J+QXt3JaEjM2NjY2dp48ct5zZQk2NjY29iyB5eXK9QnJ52JjY2Njr6eWJ5LQemHzYC8NGxsb++vZ+dD0e77+r/NtbGxs7C9mt09eVOQhJkVLkrQ+RI6NjY29KTsPMS9R8lWefNybJ11sbGzs09h5ckpS1GzVJsG3V4CNjY19GntWMNw7GJgtAC01lbCxsbG3YBcrL2UDaNZauk6WeerCxsbGxk7Kjzx11Q2g0fjhw89iY2Njb8puWzzt2CAfBuQFTF6oYGNjY5/DbsNaGS20F5QnxaVNJWxsbOyfZbftnrZh1C76zEa80RVjY2Njb8pO/q1vxwZJarxrMFycg42Njb0pu13NyUNZGQYkpUXdbMLGxsbemj0LqG3xtEucs0RbJDBsbGzsLdhtE6fFtC2qlfZTsXyJjY2NvRE7LxWS0qW9oFnKnI17sbGxsc9hP7fmnpPuKlGwsbGxz2G3XyeM/ILuXfesxwPY2NjYP87Oi4e2xZ8/eQm00qjCxsbG3ps9S2Bt4ylJcsl1tL8GbGxs7L3Zs4+ZDQnuenV2WdjY2Nh7s2fNozaUleSXj3jrnVNsbGzsjdgrrfkWk6ef9UUfbGxs7DPZSbj5wLUNfeWpSxFsbGzsH2e3z2z4mhcwddN/VopgY2Njb8SeJYZZulpZu1lJjdjY2NgnsGdrMW24K6ettJOwsbGxz2Hn7aF20efpdlJUtGBjY2NjL4TetqiS85N4sLGxsbFnTaK7UtpsdFGMB7CxsbG3Y+fBFePV0fevk+IssWFjY2PvzW4bNy1+NgxoxwN1AsPGxsbegn3Og42NjY2NjY2Njf01z1+ku8OmsTaAIQAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/玄学/">玄学</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/设计模式/">设计模式</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=一句话了解设计模式&url=https://blog.gfkui.com/2019/03/27/一句话了解设计模式/index.html&pic=https://blog.gfkui.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=一句话了解设计模式&url=https://blog.gfkui.com/2019/03/27/一句话了解设计模式/index.html&via=WoodyXiong" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gfkui.com/2019/03/27/一句话了解设计模式/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.gfkui.com/2019/03/27/一句话了解设计模式/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.gfkui.com/2019/03/27/一句话了解设计模式/index.html&text=一句话了解设计模式" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前认为能够实现功能即可，但是真正在应用中，随着代码的演变，后期代码的可维护性越来越差。例如改一处而动全身，大大增加了代码的出错隐患；主流程代码混入了奇奇怪怪的逻辑，导致代码晦涩难懂。而使用了设计模式之后，在代码演变时尽量都是增加函数或者类，降低了很多安全隐患，也减少了不必要的工作量。使用了合适的设计模式，绝对会让你事半功倍。</p>
+<p>需要理解这么多的设计模式也不是一件容易的事情，我将第一次看设计模式的体会尽量用一句话体现出来，这样更加突出了其独特的设计风格，在者在需要使用的时候返回来查一些模式也比较容易查到。由于我也是第一次研究设计模式，按照自己理解得出的，且水平有限，可能跟别处会有出入。如有不同意见，欢迎留言。</p>
+<h2 id="设计模式的7大基本原则"><a href="#设计模式的7大基本原则" class="headerlink" title="设计模式的7大基本原则"></a>设计模式的7大基本原则</h2><p>此7大基本原则用来描述一种软件的设计方式，用于量化设计模式的好坏。相比于“好用、牛逼、屌的一笔”等形容词，对设计有了更具体的描述。根据网上的说法，分成6种和7种基本原则，一般是多出了<code>单一职责原则</code>。我认为设计模式里面很多种是互相穿插，有些重复的，所以到底几种并不重要，而重要的是对其进行理解，并用到实际搬砖中。(ps 为了更愉悦地吹逼，我觉得多了解几种还是挺不错的)</p>
+<h3 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h3><p>对扩展开放，对修改关闭。在增加新功能的时候，增加类和函数即可，无需改造之前的类，这点在软件设计时非常重要。<strong>策略模式</strong></p>
+<h3 id="里氏代换原则"><a href="#里氏代换原则" class="headerlink" title="里氏代换原则"></a>里氏代换原则</h3><p>子类可以继承父类被进行调用，只要父类存在的时候，一定可以替换成子类。这是<code>开闭原则</code>的步骤，正是因为继承，才能实现新功能来的时候继承就好。</p>
+<h3 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a><a href="https://juejin.im/post/5b7427b9518825613d38974b" target="_blank" rel="noopener">依赖倒置原则</a></h3><p>设计和实现要依赖于抽象而非具体，当类之间互相依赖的时候，尽量用set方法将实例注入进去，而上层调用底层的抽象函数。这样可以很好地支持开闭原则。</p>
+<h3 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a><a href="https://juejin.im/post/5b7e4d31f265da43223c3043" target="_blank" rel="noopener">接口隔离原则</a></h3><p>子类都有的方法，用抽象类继承；子类不一定有的，用接口实现。<a href="https://www.lovelucy.info/abstract-class-vs-interface.html" target="_blank" rel="noopener">门的例子</a></p>
+<h3 id="迪米特原则-最少知道原则"><a href="#迪米特原则-最少知道原则" class="headerlink" title="迪米特原则 | 最少知道原则"></a><a href="https://juejin.im/post/5b865bb7f265da437e4d8a96" target="_blank" rel="noopener">迪米特原则 | 最少知道原则</a></h3><p>外界无需知道的，使用private；上层只需要知道中间层，中间层只需要知道底层。</p>
+<h3 id="合成复用原则"><a href="#合成复用原则" class="headerlink" title="合成复用原则"></a>合成复用原则</h3><h3 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a><a href="https://juejin.im/post/5b6d25ece51d455d68261ca0" target="_blank" rel="noopener">单一职责原则</a></h3><p>一个类，只干这个类该做的事情；服务员是服务员，厨师是厨师。</p>
+<h2 id="具体到所有设计模式"><a href="#具体到所有设计模式" class="headerlink" title="具体到所有设计模式"></a>具体到所有设计模式</h2><h3 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h3><p><a href="http://www.runoob.com/design-pattern/factory-pattern.html" target="_blank" rel="noopener"><strong>简单工厂模式</strong></a></p>
+<p>工厂类通过传入的参数来生成对应的类，非常简单，但是有很多if语句来判断参数。</p>
+<p><a href="http://www.runoob.com/design-pattern/abstract-factory-pattern.html" target="_blank" rel="noopener"><strong>抽象工厂模式</strong></a></p>
+<p>当工厂类有很多个的时候，比如<code>图形工厂</code>和<code>颜色工厂</code>，可以将工厂继续抽象，用一个总工厂来生成<code>图形工厂</code>和<code>颜色工厂</code>，最后再有<code>图形工厂</code>和<code>颜色工厂</code>生产产品。</p>
+<p><a href="http://www.runoob.com/design-pattern/singleton-pattern.html" target="_blank" rel="noopener"><strong>单例模式</strong></a></p>
+<p>如果类只需被实例化一次，就将他放在static里面，并且开一个static方法将其送出去。值得注意的是，为了保证线程安全，不能同时被new两次，所以将同步锁加在new的时候。如果在加在类的时候实例化，则是<code>饿汉模式</code>；若是第一次调用的时候new，则为<code>懒汉模式</code>。</p>
+<p><a href="http://www.runoob.com/design-pattern/builder-pattern.html" target="_blank" rel="noopener"><strong>建造者模式</strong></a></p>
+<p>类似套餐的情况，底层的东西基本不变，但是组合在一起经常变化；底层统一继承一个商品，外面造一个套餐类，保存一个List来存储底层不变的东西，这样就可以自由组合多种<code>套餐</code>。</p>
+<p><a href="http://www.runoob.com/design-pattern/prototype-pattern.html" target="_blank" rel="noopener"><strong>原型模式</strong></a></p>
+<p>当初始化一个类需要消耗大量资源的时候，将一个实例化保存到一个地方。如果之后需要继续实例化这个类的话，可以用<code>clone()</code>(java和php都有这个函数)将之前的实例化拷贝出来。值得注意的是，浅拷贝只是拷贝了引用，而没有真正去拷贝；而深拷贝是所有都拷贝。<a href="https://itopic.org/php-clone.html" target="_blank" rel="noopener">php浅拷贝和深拷贝</a></p>
+<h3 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h3><p><a href="http://www.jasongj.com/design_pattern/adapter/" target="_blank" rel="noopener"><strong>适配器模式</strong></a></p>
+<p>例如一个app需要调用摄像头，但是摄像头是不同公司的，有索尼、佳能等，每个公司提供的sdk都不一样，主要是函数名不一样。这时候我们可以在sdk上继续封装一层适配器层，这样无需更改sdk代码就可以实现函数名的统一。</p>
+<p><a href="http://www.jasongj.com/design_pattern/bridge/" target="_blank" rel="noopener"><strong>桥接模式</strong></a></p>
+<p>在类的构造函数或是set方法将一些子属性传进去，以保证类的多样性防止<code>类爆炸</code>。</p>
+<p><a href="http://www.runoob.com/design-pattern/filter-pattern.html" target="_blank" rel="noopener"><strong>过滤器模式</strong></a></p>
+<p>这种模式将各种过滤的方法抽象化并解耦出来，然后使用一些简单的<code>or</code>和<code>and</code>等逻辑简单组合形成多样化的过滤组合模式。</p>
+<p><a href="http://www.runoob.com/design-pattern/composite-pattern.html" target="_blank" rel="noopener"><strong>组合模式</strong></a></p>
+<p>这个设计模式有点像观察者模式，与观察者不同的是，这个模式的结构是树状，并且是可以传递的。例如公司老板告诉各个部门主管我们公司要破产啦，然后各个部门主管告诉每个人咱们公司要破产了。这个消息传递的机制就是组合模式，怎么感觉名字和这个设计模式的原理匹配不上。</p>
+<p><a href="https://zh.wikipedia.org/wiki/修饰模式" target="_blank" rel="noopener"><strong>装饰器模式</strong></a></p>
+<p>感觉这个设计模式有点难理解，初步感觉是给某个类递归地附加几种平行的属性。防止互相继承导致<code>类爆炸</code>。(效果如同桥接模式，但是实现方法不一样)</p>
+<p><a href="https://blog.csdn.net/carson_ho/article/details/54910625" target="_blank" rel="noopener"><strong>外观模式</strong></a></p>
+<p>咋一眼看去感觉是个非常傻屌的设计模式，像是将很多类放在一个中心类中，然后for循环进行批量操作，有点像观察者模式，不过这个相对来说灵活些，因为子类可以不一样，但是写会更复杂些。</p>
+<p><a href="http://www.runoob.com/design-pattern/flyweight-pattern.html" target="_blank" rel="noopener"><strong>享元模式</strong></a></p>
+<p>一般结合工厂模式，类似单例模式，减少类的数量。主要内部是有个hashMap之类的结构存入“单例实体”。</p>
+<p><a href="http://www.runoob.com/design-pattern/proxy-pattern.html" target="_blank" rel="noopener"><strong>代理模式</strong></a></p>
+<p>私认为<code>代理模式</code>和<code>适配器模式</code>的差异不大，都是一个中间层对底层处理逻辑。适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口（来自runoob）。反正用的时候随心所欲，无需分这么细。</p>
+<h3 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h3><p><a href="http://www.runoob.com/design-pattern/chain-of-responsibility-pattern.html" target="_blank" rel="noopener"><strong>责任链模式</strong></a></p>
+<p>有点像链表一样，有着传递的感觉，一般来说是将同一个变量传给A类的函数，A发现此操作无法处理，则传给B，B接着传给C，直到碰到可以处理的类。常用于审批流程，科室的任务先传给处级，处级操作完交到局里，局里操作完到部里，直到可以操作为止。</p>
+<p><a href="http://www.runoob.com/design-pattern/command-pattern.html" target="_blank" rel="noopener"><strong>命令模式</strong></a></p>
+<p><code>命令模式</code>大概就是先人执行命令行得出的灵感吧，接触到最深的例子就是在gui中，每个按钮都是几条命令行叠加的结果。而<code>命令模式</code>将这种方式解耦，拆分成三个类，即<code>命令角色(gui)</code>、<code>中间接受者</code>(命令行的业务操作在这里，可以进行执行回退等功能)、<code>实际命令</code>(这些类是一个一个的命令)，接收者通过调用这些一个一个的命名来对<code>命令角色</code>做出相应的相应。这样将一个类一步一步的解耦。</p>
+<p><a href="https://www.runoob.com/design-pattern/interpreter-pattern.html" target="_blank" rel="noopener"><strong>解释器模式</strong></a></p>
+<p>通常用于<code>编译器</code>或<code>运算表达式</code>，<code>解释器模式</code>指的是将一个句子拆分成语法树，底层一步一步将结果汇总，最后将结果输出，有点像<code>组合模式</code>。</p>
+<p><a href="https://www.runoob.com/design-pattern/iterator-pattern.html" target="_blank" rel="noopener"><strong>迭代器模式</strong></a></p>
+<p>一般用于自定义的容器，类似<code>list</code>、<code>map</code>等数据结构，调用方无需关心底层容器是如何将数据吐出来，只管用即可。而底层就是用了迭代器，像链表一样可以一直向下访问，以致于上层可以用<code>for</code>、<code>while</code>等语句直接访问数据。</p>
+<p><a href="https://www.runoob.com/design-pattern/mediator-pattern.html" target="_blank" rel="noopener"><strong>中介者模式</strong></a></p>
+<p>类之间的<code>网状</code>调用关系通过一个中间类变成<code>星状</code>调用关系，大家只关心如何跟中介进行交互，降低类与类之间的耦合。例如<code>MVC</code>模式的<code>controller</code>控制器就是一个中介，<code>model</code>与<code>view</code>层通过<code>controller</code>来进行相互交互。</p>
+<p><a href="https://www.runoob.com/design-pattern/memento-pattern.html" target="_blank" rel="noopener"><strong>备忘录模式</strong></a></p>
+<p>常用于<code>通关存档</code>、<code>ctrl-z</code>、<code>浏览器的后退</code>等场景，主要功能是将当时的数据保存下来，有可能是保存成类，也可能是序列化，在需要的时候可以反向序列化等方式回到当时的场景，常常配合<code>原型模式</code>。</p>
+<p><a href="http://www.jasongj.com/design_pattern/observer/" target="_blank" rel="noopener"><strong>观察者模式</strong></a></p>
+<p>个人理解此种设计模式也是<code>发布/订阅模式</code>。一个很经典的例子就是，一个tcp服务器端和很多个tcp客户端，一个场景是服务器端全局广播信息给所有客户端，这个时候客户端就是观察者。实现方式是，每次客户端与服务端建立连接之后，就在服务器端注册这个socket，也就是服务器端有个list，每次有客户端连接就加一个。当需要全局发送广播的时候，服务端遍历list将信息发送给客户端，这尼玛就是观察者模式。</p>
+<p><a href="http://www.runoob.com/design-pattern/state-pattern.html" target="_blank" rel="noopener"><strong>状态模式</strong></a></p>
+<p>状态模式比较注重的是获取<strong>当前状态</strong>，并对于当前状态去干此状态的事情。相比于一堆if……else……的逻辑判断，此模式是根据一个其成员的状态去运行的。最后，我觉得著名的<strong>状态机</strong>就是<strong>状态模式</strong>+<strong>责任链模式</strong>的结果，这样才能根据状态不停地将任务传递下去。</p>
+<p><a href="https://blog.csdn.net/qiumengchen12/article/details/44923139" target="_blank" rel="noopener"><strong>空对象模式</strong></a></p>
+<p>例如工厂模式，传入的值如果在工厂没有对应的类，所以工厂返回的是<code>null</code>，如果后面的程序没有继续判断是否是Null，则上层程序按照这个实例进行操作的话，就会报空指针异常的错误。为了程序的健壮性，<code>空对空模式</code>就是将本是返回的<code>null</code>值返回成一个专门的空实例，以致于上层程序如果调用的话，返回的函数都是有值的，但是会提示是空的。我认为这个模式可以提升一部分健壮性，但是不一定适合，如果内部太过复杂，可能很难模拟掉它的返回，所以要因地制宜。<a href="https://blog.csdn.net/ljyljyok/article/details/77449287" target="_blank" rel="noopener">一些参考</a></p>
+<p><a href="http://www.jasongj.com/design_pattern/strategy/" target="_blank" rel="noopener"><strong>策略模式</strong></a></p>
+<p>在一个流程下来，中间的某个部分可能有很多种方式去实现，例如将数里所有学生拿出来，并且将学生按照成绩排序，拿到最终的学生数组。中间的成绩排序有很多种方式，例如快排、冒泡、桶排等，这些排序可以拿出来专门的类，在上层可随意指定哪种排序方式。此设计模式经常可以运用的到，在php中，配合call_user_function使用最佳。</p>
+<p><a href="https://www.runoob.com/design-pattern/template-pattern.html" target="_blank" rel="noopener"><strong>模板模式</strong></a></p>
+<p>这种妈卖批模式竟然有名字，咋一看就是抽象类将骨架定好，然后子类去继承然后实现每个步骤的方法。这应该就是最简单最简单的类继承了。</p>
+<p><a href="https://www.jianshu.com/p/cd17bae4e949" target="_blank" rel="noopener"><strong>访问者模式</strong></a></p>
+<p>此种设计模式感觉看得比较懵逼。有一个容器类，装着各个元素，各个元素都有<code>accept</code>函数，专门用来接收访问者，然后将自己传给访问者，调用的时候将访问者放进容器中遍历一遍即可。类与类之间互相嵌套，耦合程度挺高的。是不是很懵逼，懵逼就对了，太复杂的设计模式可能并不是太好，所以这个放在最后一个行为模式可能就是这个原因吧。</p>
+<h3 id="J2EE-模式"><a href="#J2EE-模式" class="headerlink" title="J2EE 模式"></a>J2EE 模式</h3><p><a href="https://www.runoob.com/design-pattern/mvc-pattern.html" target="_blank" rel="noopener"><strong>MVC模式</strong></a></p>
+<p>最经常用的一个模式，M指model层,V指view层,C指controller层。<code>controller</code>层夹在<code>view</code>层和<code>model</code>层的中间，他们的交互全部是通过中间层<code>controller</code>进行交互的。这种模式经常用于网站的<code>MVC</code>框架中，实现了界面与数据库模型的解耦。</p>
+<p><a href="https://www.kancloud.cn/wizardforcel/w3school-design-patterns/91349" target="_blank" rel="noopener"><strong>业务代表模式</strong></a></p>
+<p>这个模式没怎么看懂，感觉网上资料比较少，都是抄来抄去的。感觉底层就是一个工厂，然后有几层中间层，知道原理，但是不知道实现啥，为什么这样做。。。zZ</p>
+<p><a href="https://www.runoob.com/design-pattern/composite-entity-pattern.html" target="_blank" rel="noopener"><strong>组合实体模式</strong></a></p>
+<p>组合模式的运用</p>
+<p><a href="https://www.runoob.com/design-pattern/data-access-object-pattern.html" target="_blank" rel="noopener"><strong>数据访问对象模式</strong></a></p>
+<p>类似开发中的Controller-&gt;Service-&gt;Entity-&gt;Model，Model是一个一个的实体，Entity是多个实体进行操作的一层，对上层提供对Model层的方法，而Service为纯业务层。</p>
+<p><a href="https://www.runoob.com/design-pattern/front-controller-pattern.html" target="_blank" rel="noopener"><strong>前端控制器模式</strong></a></p>
+<p>将所有请求收敛，通过一个调度器，这个调度器可以做日志收集、权限校验等功能，然后再发散到各个策略中去，最后生成视图层View</p>
+<p><a href="https://www.runoob.com/design-pattern/intercepting-filter-pattern.html" target="_blank" rel="noopener"><strong>拦截过滤器模式</strong></a></p>
+<p>就拿上一个<code>前端控制器模式</code>来讲吧，中间的调度器就可以做成一层一层的，并且是可以自由添加减少的，而一层一层的拦截器存储在一个列表中，这样就可以自由的添加减少拦截器</p>
+<p><a href="https://www.runoob.com/design-pattern/service-locator-pattern.html" target="_blank" rel="noopener"><strong>服务定位器模式</strong></a></p>
+<p>理解到是首先去取缓存，若缓存有就拿缓存，没有的话实例化一个再存入缓存。感觉上最好搭配<code>原型模式</code>，在需要的时候进行深拷贝以取到不同的实例</p>
+<p><a href="https://www.runoob.com/design-pattern/transfer-object-pattern.html" target="_blank" rel="noopener"><strong>传输对象模式</strong></a></p>
+<p>将一个类型的多个实例打包成一个大的实例，实例里面大概率又是列表的数据结构，然后将这个大实例传给接收方，这样的做法是减少网络传输的中间断开的的概率，而进行打包传输</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gfkui.com/2019/03/27/一句话了解设计模式/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gfkui.com/2019/03/27/一句话了解设计模式/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//kui-ye-de-hei-zuo-fang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//kui-ye-de-hei-zuo-fang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/05/19/Jetbrain软件的一些常用功能总结/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/03/18/复杂业务的一些思考/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/logo.jpg" alt="WoodyXiong's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        woodyxiong@yahoo.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="maito:woodyxiong@yahoo.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/奇怪的知识/">奇怪的知识<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/探索/">探索<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/游戏体验/">游戏体验<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/研发日志/">研发日志<span class="sidebar_archives-count">20</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">cloud_circle</i>
+                
+                标签云
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间线">
+                
+                    <i class="material-icons sidebar-material-icons">send</i>
+                
+                时间线
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">photo_library</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情链接">
+                
+                    <i class="material-icons sidebar-material-icons">people</i>
+                
+                友情链接
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">36</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/zuosixiaoshenxi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/woodyxiong/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://www.github.com/woodyxiong" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/32123244/#/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/zuosixiaoshenxian" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>魁爷的黑作坊
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?5+2z7ZZmFuZK5IcimlZbxw==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            太阳系之旅 | 
+        
+        魁爷的黑作坊
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="生活,编程,玩">
+    <meta name="keywords" content="后端,PHP,全栈,Web,自学编程,学习分享,玩,自由,玄学,宇宙,探索">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="魁爷的黑作坊">
+    <meta name="msapplication-starturl" content="https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="魁爷的黑作坊">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="MNB77WwXXY">
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="太阳系之旅 | 魁爷的黑作坊">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="生活,编程,玩">
+    <meta property="og:article:tag" content="玄学"> <meta property="og:article:tag" content="宇宙"> <meta property="og:article:tag" content="探索"> 
+
+    
+        <meta property="article:published_time" content="Sat Oct 26 2019 02:34:45 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 22 2020 17:15:30 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/index.html",
+    "headline": "太阳系之旅",
+    "datePublished": "Sat Oct 26 2019 02:34:45 GMT+0800",
+    "dateModified": "Sun Nov 22 2020 17:15:30 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "WoodyXiong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/logo.jpg"
+        },
+        "description": "淡泊明志，宁静致远"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "魁爷的黑作坊",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",玄学,宇宙,探索后端,PHP,全栈,Web,自学编程,学习分享,玩,自由",
+    "description": "生活,编程,玩",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-71785931-2', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?ef419ee57c7007748e3ffd3f542a9a24';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#行星简介"><span class="post-toc-number">2.</span> <span class="post-toc-text">行星简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#水星-Mercury"><span class="post-toc-number">3.</span> <span class="post-toc-text">水星 Mercury</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何形成"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">如何形成</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#金星-Venus"><span class="post-toc-number">4.</span> <span class="post-toc-text">金星 Venus</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#地球-Earth"><span class="post-toc-number">5.</span> <span class="post-toc-text">地球 Earth</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#火星-Mars-曾经的水世界"><span class="post-toc-number">6.</span> <span class="post-toc-text">火星 Mars 曾经的水世界</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#木星-Jupiter"><span class="post-toc-number">7.</span> <span class="post-toc-text">木星 Jupiter</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#土星-Saturn"><span class="post-toc-number">8.</span> <span class="post-toc-text">土星 Saturn</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#土卫二"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">土卫二</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#土卫六-Titan"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">土卫六 Titan</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#天王星-Uranus"><span class="post-toc-number">9.</span> <span class="post-toc-text">天王星 Uranus</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#海王星-Neptune"><span class="post-toc-number">10.</span> <span class="post-toc-text">海王星 Neptune</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#海卫一"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">海卫一</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#冥王星（不在8大行星）"><span class="post-toc-number">11.</span> <span class="post-toc-text">冥王星（不在8大行星）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#新视野号探索冥王星"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">新视野号探索冥王星</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他行星"><span class="post-toc-number">12.</span> <span class="post-toc-text">其他行星</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小行星带"><span class="post-toc-number">12.1.</span> <span class="post-toc-text">小行星带</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#木卫一"><span class="post-toc-number">12.2.</span> <span class="post-toc-text">木卫一</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#人造卫星经过"><span class="post-toc-number">12.3.</span> <span class="post-toc-text">人造卫星经过</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他知识"><span class="post-toc-number">13.</span> <span class="post-toc-text">其他知识</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://tencentcdn.gfkui.cn/19/10/19/%E5%A4%AA%E9%98%B3%E7%B3%BB.jpg)">
+    
+            <p class="article-headline-p">
+                太阳系之旅
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/logo.jpg" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>WoodyXiong</strong>
+        <span>10月 26, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0ElEQVR42u3awW5iMQwFUP7/p6fbkZjCvXFaMcnJClWP4BOkGtt5/LlyPbCxsbGxsbGxsbE/kv2I1z82+uvvz08m+zw//91u85ixsbGxz2a/+dcfPJMElO+cH1AeMzY2NvYN7O8CTV7nQb9OUe3+SczY2NjY2HmR8DqZzTHY2NjY2HvZeQspYSQ7YGNjY2PPm0ptMsufeT1mmDfCsLGxsc9m50PTz3n9q/NtbGxs7A9mtytvEuUh5sXMKHJsbGzsQ9l5Yih+9A+u10wO6E2c2NjY2Iey1xLV5Dj2pqg8KmxsbOyz2XnCyNv0b4JYGhsk8RRNJWxsbOwj2Ek7vk0/+bC2vWQ5Gg9jY2NjX8zOk9CjXHlrae0TsbGxsW9gJ+mhLSGSpJWnsV0RYmNjY5/NThpD+U//tfImb3W1I15sbGzss9l546YtG/Jm0KSFVMSMjY2NfRm7uAqzFPquqzzFcWBjY2Mfyv45fHKxZoIfJTBsbGzsg9hraWne4kmSUz5aqMcD2NjY2EezdzWJ2nSVH0p+ARQbGxv7Bva8nJg0gPJElaSxN5+OjY2NfTQ72agtSNpW0dr4Ni9psLGxsU9l74LlLao68QwKEmxsbOwb2G17aNJ4yscJk0HvhqYSNjY29n/F3nt1pj2CdlQw+jKwsbGxj2a3qSUvY9YGtPlVnvxd2NjY2Gez8+3yFk/bNsoPbvG92NjY2Jex88JgPjbI20PtVR5sbGzs29i7gl47gnzPtWSJjY2NfSq7XbuOKS945mMDbGxs7LPZaymhLQNet4TaJxdTIzY2NvbR7LWklR/EWjqcXOXBxsbGvpPdXqlJ2kPtUHnSQlpMYNjY2NjXs9fKmLwZ1Ma2OOjFxsbGvozdFgNtAZOUFvnRYGNjY9/DboNuh7iTIURLxcbGxr6N3TZu8gFtnmB2xVMkMGxsbOwj2PcsbGxsbGxsbGxs7I9ZX5CTuczc4Ys4AAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/宇宙/">宇宙</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/探索/">探索</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/玄学/">玄学</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=太阳系之旅&url=https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/index.html&pic=https://blog.gfkui.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=太阳系之旅&url=https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/index.html&via=WoodyXiong" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/index.html&text=太阳系之旅" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道为啥，突然对一些其他领域的事情特别特别感兴趣，就像初三中考前对转笔这个小众运动特别着迷一样。期间有看过三体、学习宏观经济学、重看富爸爸系列等，看完三体后，感受到了宇宙的异常缥缈和辽阔，人类无论是空间还是时间上在宇宙中都是微小到不能再微小的尘埃，而广阔的宇宙有着众多的未知可以去探索。了解宇宙最终还是了解我们自己。</p>
+<p>世界万物都是有规律可循，有始有终，星系有辉煌和衰老，人的一生有起起伏伏，经济的也是大周期和小周期交替进行。对于周边发生的事物，无论对当时的影响有多大，将时间线拉长只是过眼云烟而已。</p>
+<p>银河系下有太阳系，太阳系下有各大行星，正如分子下有原子，原子下有电子，而原子核电子也是不可分割的吗，会不会像三体描绘的，将质子展开，竟然存在一个文明。而更高维的世界，看着太阳系就跟我们看着原子一样。</p>
+<p>最后感谢李永乐老师深入浅出许多宇宙方向课程，还有BBC的《行星》纪录片把我的思绪随着人造卫星漫游整个太阳系。</p>
+<h2 id="行星简介"><a href="#行星简介" class="headerlink" title="行星简介"></a>行星简介</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>距离太阳</th>
+<th>半径</th>
+<th>公转速度</th>
+<th>自转速度</th>
+<th>地表温度</th>
+<th>形态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水星</td>
+<td>5800万公里</td>
+<td>2439公里</td>
+<td>88天</td>
+<td>58天</td>
+<td>-172℃~430℃</td>
+<td>刚体</td>
+</tr>
+<tr>
+<td>金星</td>
+<td>1.08亿公里</td>
+<td>6073公里</td>
+<td>224.7天</td>
+<td>243天</td>
+<td>465℃～485℃</td>
+<td>刚体</td>
+</tr>
+<tr>
+<td>地球</td>
+<td>1.5亿公里</td>
+<td>6378公里</td>
+<td>365天</td>
+<td>24小时</td>
+<td>-89.2℃~58.8℃</td>
+<td>刚体</td>
+</tr>
+<tr>
+<td>火星</td>
+<td>2.28亿公里</td>
+<td>3396公里</td>
+<td>687天</td>
+<td>24小时</td>
+<td>-5℃~-87℃</td>
+<td>刚体</td>
+</tr>
+<tr>
+<td>木星</td>
+<td>7.8亿公里</td>
+<td>69911公里</td>
+<td>11.8年</td>
+<td>9小时50分</td>
+<td>-148℃</td>
+<td>流体(液体+气体)</td>
+</tr>
+<tr>
+<td>土星</td>
+<td>14亿公里</td>
+<td>60268公里</td>
+<td>29.6年</td>
+<td>10.546小时</td>
+<td>-191.15℃～-130.15℃</td>
+<td>流体(液体+气体)</td>
+</tr>
+<tr>
+<td>天王星</td>
+<td>29亿公里</td>
+<td>25560公里</td>
+<td>84年</td>
+<td>17小时</td>
+<td>-224℃</td>
+<td>流体(液体+气体) </td>
+</tr>
+<tr>
+<td>海王星</td>
+<td>45亿公里</td>
+<td>49532公里</td>
+<td>164年</td>
+<td>16小时</td>
+<td>-214℃</td>
+<td>流体(液体+气体) </td>
+</tr>
+</tbody>
+</table>
+<h2 id="水星-Mercury"><a href="#水星-Mercury" class="headerlink" title="水星 Mercury"></a>水星 Mercury</h2><p><img src="https://tencentcdn.gfkui.cn/19/10/19/%E6%B0%B4%E6%98%9F.png" alt="水星"></p>
+<ul>
+<li>远日点7000万公里，近日点4600万公里，轨道呈椭圆形，这点很神奇</li>
+</ul>
+<p><strong>人造卫星经过</strong></p>
+<blockquote>
+<p>2004年信使号</p>
+</blockquote>
+<ol>
+<li>通过探测引力场以及自转时的偏差，发现内核半径占整个星球的85%</li>
+<li>有很多易挥发的元素，例如硫、钾</li>
+<li>在水星上硬着陆</li>
+</ol>
+<h3 id="如何形成"><a href="#如何形成" class="headerlink" title="如何形成"></a>如何形成</h3><p>推论： 在距离太阳1.7亿公里的地方形成，某颗大型行星与水星碰撞，将水星推向了太阳，所以是那样的轨道。并且外表皮都碎裂了，形成了金星，而水星只是内核而已。</p>
+<h2 id="金星-Venus"><a href="#金星-Venus" class="headerlink" title="金星 Venus"></a>金星 Venus</h2><p><img src="https://tencentcdn.gfkui.cn/19/10/19/%E9%87%91%E6%98%9F.png" alt="金星"></p>
+<ul>
+<li>有大气层，二氧化碳96.5%</li>
+<li>大气压是地球的89倍</li>
+<li>金星与地球的组成、大小相似</li>
+<li>科学家推测以前的太阳比较暗淡，金星也像地球一样有生命；后来太阳膨胀，导致金星表面温度过高</li>
+<li>温度升高，大量的水进入大气，温室效应太过剧烈，所以温度越来越高</li>
+<li>温度最高的行星</li>
+</ul>
+<p><strong>人造卫星经过</strong></p>
+<blockquote>
+<p>苏联发射了多颗人造卫星</p>
+</blockquote>
+<p>一开始大家以为金星上有水有生命，还专门设计可以浮起来的卫星。金星13号实现软着陆，拍摄了第一张金星的地表照片，发现金星是人间地狱。</p>
+<h2 id="地球-Earth"><a href="#地球-Earth" class="headerlink" title="地球 Earth"></a>地球 Earth</h2><p><img src="https://tencentcdn.gfkui.cn/19/10/19/%E5%9C%B0%E7%90%83.png" alt="地球"></p>
+<ul>
+<li>70%被水覆盖</li>
+<li>百万种生物</li>
+<li>已确定生命是来自地球自身（39亿年前），可能是火山口的化学反应</li>
+<li>大气层厚度100公里</li>
+</ul>
+<p><strong>火山活动的能量来源</strong></p>
+<ul>
+<li>45亿年前地球形成时产生的余热</li>
+<li>地核附近各种化学元素的放射性衰变</li>
+</ul>
+<p><strong>如何形成的</strong></p>
+<ol>
+<li>二氧化碳浓度非常高，海水呈酸性，40亿年前是个有毒的行星</li>
+<li>海藻中和了海洋的酸碱，并且红色浓雾的大气（甲烷）变成了氧气</li>
+</ol>
+<p><strong>为什么大气能保持</strong></p>
+<p>因为地磁引力，使太阳风不会直接袭击地球；而地磁引力是铁水由于自转旋转，带着电荷产生的。</p>
+<h2 id="火星-Mars-曾经的水世界"><a href="#火星-Mars-曾经的水世界" class="headerlink" title="火星 Mars 曾经的水世界"></a>火星 Mars 曾经的水世界</h2><p><img src="https://tencentcdn.gfkui.cn/19/10/19/%E7%81%AB%E6%98%9F.png" alt="火星"></p>
+<ul>
+<li>有着所有生命出现的化学必要条件，轨道也相对适宜</li>
+<li>由于有温室气体，所以表面的水流淌了几亿年</li>
+<li>由于火星半径小，大气层逐渐消失，水直接被蒸发进了宇宙，还在蒸发（火星地核不活动了，所以没有磁场，只能直面太阳风）</li>
+<li>有个最大的火山 奥林匹斯山</li>
+<li>十分狭长的水手谷</li>
+<li>赫拉斯盆地（被撞的）</li>
+<li>25亿年前，火星是个水世界，温度25℃<ul>
+<li>某天无数小行星冲进火星并解体（39亿年前）</li>
+<li>估计每平方米有53吨岩石落下</li>
+<li>推测原因：海王星的向外迁移的时候经过<code>柯伊伯带</code>，将大量陨石带向火星和地球</li>
+</ul>
+</li>
+</ul>
+<p><strong>人造卫星经过</strong></p>
+<ol>
+<li>水手4号 环绕拍摄</li>
+<li>维京号软着陆到火星</li>
+<li>好奇号<ul>
+<li>这个屌的一比，先降落伞带过去，然后有个反向火箭助推器稳在空中，最后将好奇号放置在火星上</li>
+<li>将土壤采集并且显微镜研究，发现土壤中有2%的水</li>
+</ul>
+</li>
+</ol>
+<h2 id="木星-Jupiter"><a href="#木星-Jupiter" class="headerlink" title="木星 Jupiter"></a>木星 Jupiter</h2><p><img src="https://tencentcdn.gfkui.cn/19/10/19/%E6%9C%A8%E6%98%9F.png" alt="木星"></p>
+<ul>
+<li>最有艺术感的行星</li>
+<li>太阳系中自转最快的行星</li>
+<li>木星的高层大气是由体积或气体分子约88%到92%的氢和约8%到12%的氦所组成</li>
+<li>太阳系中最大的行星（太阳系所有卫星+小行星质量的2.5倍）</li>
+<li>气态行星，流浪地球的主角</li>
+<li>木星形成初期吸收了大量的物质，并向太阳方向移动，大概已经到了火星轨道，但是远处的土星也在快速形成，所以讲木星拉回去了；以致于木星内轨道的物质仅剩下可以生成水星、金星、地球、火星</li>
+<li>木星回撤期间，将小行星带的水和冰带回了太阳系内层</li>
+</ul>
+<p><strong>人造卫星经过</strong></p>
+<ul>
+<li>亚特兰蒂斯号搭载的伽利略号，拍摄了太阳系外的小行星被木星解体并撞向木星</li>
+<li>2011年的<code>朱诺号</code><ul>
+<li>拍摄很多近距离照片，包括<code>大红斑</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="土星-Saturn"><a href="#土星-Saturn" class="headerlink" title="土星 Saturn"></a>土星 Saturn</h2><p><img src="https://tencentcdn.gfkui.cn/19/10/19/%E5%9C%9F%E6%98%9F.png" alt="土星"></p>
+<ul>
+<li>最出名的是土星环，平均厚度只有10米</li>
+<li>恐龙时代的时候，有一颗全冰直径400公里卫星到了木星的刚体洛希极限解体了，形成了土星环</li>
+<li>土星环正在消失，每秒钟10吨落向土星</li>
+<li>早期的土星是固态物质和冰组成的</li>
+<li>吸收了氢气和氦气后，巨大的大气压力产生大量热</li>
+<li>密度很小<code>0.7g/cm³</code></li>
+<li>碳物质落向土星还有钻石雨</li>
+</ul>
+<blockquote>
+<p>土星环为什么这么亮</p>
+</blockquote>
+<p>一般的星环如果是由冰和岩石混合的，久而久之就会混合起来，变得暗淡，但是土星环是近一亿年形成的，所以光洁如新</p>
+<p><strong>人造卫星经过</strong></p>
+<ul>
+<li><code>旅行者号</code>经过拍摄了上万张照片</li>
+<li><code>卡西尼号</code>研究土星环的形成，探索土星的各个卫星</li>
+</ul>
+<h3 id="土卫二"><a href="#土卫二" class="headerlink" title="土卫二"></a>土卫二</h3><ul>
+<li>土卫四和木星的双重引力，内部一直挤压 </li>
+<li>一直喷发着水蒸气和海水冰晶，每秒钟200公斤</li>
+<li>正在填补土星环</li>
+<li><code>卡西尼号</code>从上空48km飞过</li>
+<li>喷出的物质中有有机化合物和硅微粒，很可能有生命</li>
+</ul>
+<h3 id="土卫六-Titan"><a href="#土卫六-Titan" class="headerlink" title="土卫六 Titan"></a>土卫六 Titan</h3><ul>
+<li>大气主要是氮气和甲烷</li>
+<li>科学家猜测如果太阳膨胀后，土卫六可能是个可以孕育生命的地方</li>
+</ul>
+<h2 id="天王星-Uranus"><a href="#天王星-Uranus" class="headerlink" title="天王星 Uranus"></a>天王星 Uranus</h2><p><img src="https://tencentcdn.gfkui.cn/19/10/19/%E5%A4%A9%E7%8E%8B%E6%98%9F.png" alt="天王星"></p>
+<ul>
+<li>最冷的行星，永久性深度冻结状态</li>
+<li>表面是氢气和氦气，内层是甲烷、氨和水</li>
+<li>天王星环，星环的完整性由<code>牧羊卫星</code>控制</li>
+<li>小行星带是竖着的</li>
+</ul>
+<h2 id="海王星-Neptune"><a href="#海王星-Neptune" class="headerlink" title="海王星 Neptune"></a>海王星 Neptune</h2><p><img src="https://tencentcdn.gfkui.cn/19/10/19/%E6%B5%B7%E7%8E%8B%E6%98%9F.png" alt="海王星"></p>
+<ul>
+<li>太阳系最猛烈的大气气象，2000km/h的速度移动</li>
+<li>有着著名的<code>大黑斑</code></li>
+<li>是地球的17倍大</li>
+<li>温度比天王星高，散发的热量比从太阳接收的2.5倍还多，热量还是谜</li>
+<li>可能是由于表面是液态，气体运动摩擦力较小</li>
+</ul>
+<h3 id="海卫一"><a href="#海卫一" class="headerlink" title="海卫一"></a>海卫一</h3><ul>
+<li>海王星卫星中最大的</li>
+<li>表面是固态氮</li>
+<li>表面有某处有间歇泉，喷的是气态或液态的氮</li>
+<li>公转方向与海王星相反，很可能不是海王星系统的，只是不小心被捕获了，很可能来自柯伊伯带</li>
+</ul>
+<h2 id="冥王星（不在8大行星）"><a href="#冥王星（不在8大行星）" class="headerlink" title="冥王星（不在8大行星）"></a>冥王星（不在8大行星）</h2><ul>
+<li><code>哈勃望远镜</code>发现柯伊伯带有上百个与<code>冥王星</code>差不多的天体，所以后来被除名了</li>
+<li>比月球还小</li>
+<li>-223℃</li>
+<li>表面是氮冰，有一个很大的平原</li>
+<li>底下有热源，很可能是放射性元素衰变产生的</li>
+</ul>
+<h3 id="新视野号探索冥王星"><a href="#新视野号探索冥王星" class="headerlink" title="新视野号探索冥王星"></a><code>新视野</code>号探索<code>冥王星</code></h3><ul>
+<li>最快的飞行器</li>
+<li>为了节约电能，9年后被唤醒，真是个奇迹！</li>
+<li>穿过柯伊伯带的时候，探索了最遥远的天体<code>天涯海角</code></li>
+</ul>
+<h2 id="其他行星"><a href="#其他行星" class="headerlink" title="其他行星"></a>其他行星</h2><h3 id="小行星带"><a href="#小行星带" class="headerlink" title="小行星带"></a>小行星带</h3><ul>
+<li>众多小行星互相膨胀获取形成引力弹弓发射向地球内部</li>
+<li>1亿年前，一颗10公里的行星袭击地球，导致恐龙灭绝</li>
+</ul>
+<h3 id="木卫一"><a href="#木卫一" class="headerlink" title="木卫一"></a>木卫一</h3><ul>
+<li>太阳系中火山最活跃的星球，原因就是木星的强大引力(潮汐加热)</li>
+</ul>
+<h3 id="人造卫星经过"><a href="#人造卫星经过" class="headerlink" title="人造卫星经过"></a>人造卫星经过</h3><blockquote>
+<p>惠更斯号实现了软着陆</p>
+</blockquote>
+<p>发现有鹅卵石，怀疑流淌着业态的甲烷</p>
+<blockquote>
+<p>卡西尼号略过</p>
+</blockquote>
+<p>发现有巨大的甲烷湖泊和河流</p>
+<h2 id="其他知识"><a href="#其他知识" class="headerlink" title="其他知识"></a>其他知识</h2><ul>
+<li>每隔175年就有一次9星连珠，<code>旅行者2号</code>就是依靠这个现象去太阳系外缘探测的，但是<code>旅行者2号</code>的速度非常快，观测天王星只有6小时</li>
+<li>只有<code>天王星</code>和<code>金星</code>是反方向自转的</li>
+<li>感到人类的渺小<ul>
+<li>太阳系的巨大无穷</li>
+<li>未知的东西太多太多了</li>
+<li>人类在太阳系的历史长河中太小了</li>
+</ul>
+</li>
+<li>人类到过最远的星球：冥王星</li>
+</ul>
+<p>我们要探索的区域必须是星辰大海！！！二向箔之后的景象。<br><img src="https://tencentcdn.gfkui.cn/19/10/19/%E6%98%9F%E7%A9%BA.jpg" alt="星空"></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gfkui.com/2019/10/26/奇怪的知识/太阳系之旅/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//kui-ye-de-hei-zuo-fang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//kui-ye-de-hei-zuo-fang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2020/04/27/奇怪的知识/《富爸爸，穷爸爸》第一册财务自由之路-感想/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/09/26/内网穿透原理（转载）/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/logo.jpg" alt="WoodyXiong's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        woodyxiong@yahoo.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="maito:woodyxiong@yahoo.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/奇怪的知识/">奇怪的知识<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/探索/">探索<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/游戏体验/">游戏体验<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/研发日志/">研发日志<span class="sidebar_archives-count">20</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">cloud_circle</i>
+                
+                标签云
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间线">
+                
+                    <i class="material-icons sidebar-material-icons">send</i>
+                
+                时间线
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">photo_library</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情链接">
+                
+                    <i class="material-icons sidebar-material-icons">people</i>
+                
+                友情链接
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">36</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/zuosixiaoshenxi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/woodyxiong/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://www.github.com/woodyxiong" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/32123244/#/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/zuosixiaoshenxian" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>魁爷的黑作坊
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?5+2z7ZZmFuZK5IcimlZbxw==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

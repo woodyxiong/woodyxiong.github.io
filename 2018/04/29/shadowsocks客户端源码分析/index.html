@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            shadowsocks客户端源码分析 | 
+        
+        魁爷的黑作坊
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="生活,编程,玩">
+    <meta name="keywords" content="后端,PHP,全栈,Web,自学编程,学习分享,玩,自由,socket,TCP/IP,shadowsocks,源码分析">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="魁爷的黑作坊">
+    <meta name="msapplication-starturl" content="https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="魁爷的黑作坊">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="MNB77WwXXY">
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="shadowsocks客户端源码分析 | 魁爷的黑作坊">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="生活,编程,玩">
+    <meta property="og:article:tag" content="socket"> <meta property="og:article:tag" content="TCP/IP"> <meta property="og:article:tag" content="shadowsocks"> <meta property="og:article:tag" content="源码分析"> 
+
+    
+        <meta property="article:published_time" content="Sun Apr 29 2018 21:22:34 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 22 2020 16:05:54 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/index.html",
+    "headline": "shadowsocks客户端源码分析",
+    "datePublished": "Sun Apr 29 2018 21:22:34 GMT+0800",
+    "dateModified": "Sun Nov 22 2020 16:05:54 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "WoodyXiong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/logo.jpg"
+        },
+        "description": "淡泊明志，宁静致远"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "魁爷的黑作坊",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",socket,TCP/IP,shadowsocks,源码分析后端,PHP,全栈,Web,自学编程,学习分享,玩,自由",
+    "description": "生活,编程,玩",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-71785931-2', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?ef419ee57c7007748e3ffd3f542a9a24';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用wireshark分析shadowsocks"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用wireshark分析shadowsocks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源码分析"><span class="post-toc-number">4.</span> <span class="post-toc-text">源码分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">5.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考链接"><span class="post-toc-number">6.</span> <span class="post-toc-text">参考链接</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://qncdn.gfkui.cn/18/8/04/ss.png)">
+    
+            <p class="article-headline-p">
+                shadowsocks客户端源码分析
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/logo.jpg" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>WoodyXiong</strong>
+        <span>4月 29, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1klEQVR42u3aQXLCQAwEQP7/6eQBCWQkLcTebZ8oCox6c5hI8uPryOuBjY2NjY2NjY2NfUn2I75+udGT96v3/3m313fu1YyNjY29Nzsp/dk7zSKKB5ofytM7YGNjYx/AnkTLs29VP59QqzVjY2NjYydx9TpC8oN7XQk2NjY29lp2chB5UOXBiY2NjY09GSpVhzvJiD8fJ/3bLA0bGxv78uz5Ovbzrz+638bGxsa+MHsSPMloKYmifDE8qhwbGxt7U3YeDNVv9dqPvBWpHj02Njb23uzJgzvvWyRU8X8skrGxsbE3ZedHkBSXlJiP/pMgLDzog42Njb0pO28b8hZlXvok0kb7bWxsbOybsyeM3mIgX0JU/xjY2NjYJ7OryPzgktjrxVX0PjY2Nvam7F7DUB33V4dQ+Vo3H3thY2Nj78rujY3WDvSrS+LqygEbGxt7b/YkMHqxV0XOVxHY2NjYe7N7g/vqSqB3ZL16yrmNjY2NfXN28m99Ph7KG48kxnqHXp6lYWNjY9+c3SurOaCvPi5ZbGMWP3yJjY2NfXN28nrxInbQqEThh42Njb0pu/eTeRQla4CkFVnQomBjY2Nvyu61H/mYPkHmcZWPrgqtCDY2NvYW7N5DNpNR0aTlqI6usLGxsU9g5y1E3ookkfaOFe/i9QA2Njb2bdn5SGiyBqi2H1UqNjY29mnsXhHzEX+yHu6tmbGxsbFPYydhkEfLvNDJsgEbGxv7TPY8lvKxfsKbXM1WBBsbG/uG7Oo1eXAnGUv1Dr35zCk2Njb2FuxeJFSbhwVFtxbS2NjY2Oewqz+ZNxh5dK0KsFEHho2NjX1zdrWI/AGdvL2prhMKB4SNjY2NHa9X8wamt+jtHTc2NjY2dl56FVM9gnw9jI2NjX0aOykuXwBHoRJ8PgnF6G7Y2NjYW7Org5t8JTAZ9+ctRzPAsLGxsbdgn3NhY2NjY2NjY2NjX+b6BtqkKlwBIve+AAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/TCP-IP/">TCP/IP</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/socket/">socket</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/源码分析/">源码分析</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=shadowsocks客户端源码分析&url=https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/index.html&pic=https://blog.gfkui.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=shadowsocks客户端源码分析&url=https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/index.html&via=WoodyXiong" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/index.html&text=shadowsocks客户端源码分析" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学软件那么久最喜欢的一个开源项目就是<a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="noopener">shadowsocks</a>了，虽然这个项目相对于其他的大型开源项目小得多，但是这个项目有中国特色社会主义情节在内，然后又有很多大神一起打造了<a href="https://github.com/shadowsocks" target="_blank" rel="noopener">shadowsocks项目圈</a>，包括go语言的、路由器的、Linux客户端、Windows客户端、Android客户端、Iphone客户端等，甚至出现了<a href="https://github.com/shadowsocksr-backup/shadowsocksr" target="_blank" rel="noopener">shadowsocksr</a>变种以及<a href="https://github.com/shadowsocksrr" target="_blank" rel="noopener">shadowsocksrr</a>，这两种都是从<code>shadowsocks</code>衍生而来的产物，当时众多默默无闻的大神一起为项目作出贡献。</p>
+<p><code>shadowsocks</code>使用的是<code>Apache License</code>，开源免费，国内众多开发者在国外服务搭建自己的<code>shadowsocks</code>，更有人商用<code>shadowsocks</code>，给国内小白用户搭建代理。这更加增加了网络的透明度，在开发者看来，可以通过<code>shadowsocks</code>更加方便的访问谷歌，获取世界各地碰到的<code>bug</code>信息。多年以后，可能这样自由的软件还会被继续ban掉，但是人们心中崇尚自由的精神永远不会消失。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><img src="https://qncdn.gfkui.cn/18/4/16ss%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="ss示意图"></p>
+<p><code>Shadowsocks</code>项目主要分成<code>sslocal</code>和<code>ssserver</code>，这是一个客户端和一个服务端，客户端放在本地，服务端架设在服务器中。</p>
+<blockquote>
+<p>sslocal介绍</p>
+</blockquote>
+<p><code>sslocal</code>分成两个部分，第一个部分是<code>socks5服务端</code>，它负责监听本地的请求，另外一个部分是<code>信息发送端</code>，它负责向远程的<code>ssserver</code>发送数据包。</p>
+<p>比如我想访问谷歌，首先需要配置浏览器的<code>socks5</code>代理指向本地或者局域网内的<code>socks5服务端</code>，然后<code>socks5服务端</code>将包进行加密，从<code>信息发送端</code>发送给远程的<code>ssserver</code>。</p>
+<blockquote>
+<p>ssserver介绍</p>
+</blockquote>
+<p><code>ssserver</code>也分成两个部分，一个是<code>信息接收端</code>，它是一个服务器，负责接收<code>sslocal</code>发来的加密数据，另外一个是<code>请求内容端</code>，它负责向目标服务器发送请求并将数据返回回去。</p>
+<p>继续上述的访问谷歌的操作，<code>ssserver</code>的<code>信息接收端</code>接收到<code>sslocal</code>发送的数据之后将数据进行解密，然后用<code>请求内容端</code>将需要发送的数据发送给谷歌服务器，因为<code>ssserver</code>是部署在国外，不受限制，然后将收到的数据原路返回即可到<code>socks5客户端</code>。</p>
+<h2 id="使用wireshark分析shadowsocks"><a href="#使用wireshark分析shadowsocks" class="headerlink" title="使用wireshark分析shadowsocks"></a>使用wireshark分析shadowsocks</h2><p>为了更加清楚的看清<code>shadowsocks</code>的底层传输格式，由于我已经比较熟悉<a href="https://www.jianshu.com/p/824ca990b3b7" target="_blank" rel="noopener">http的报文格式</a>，所以通过浏览器的<code>socks5</code>代理来与<code>shadowsocks</code>进行连接，然后使用<code>wireshark</code>分析底层的数据包。</p>
+<p>参考文档 <a href="https://blog.csdn.net/cszhouwei/article/details/74362427" target="_blank" rel="noopener">SOCKS5代理原理探索</a> <a href="https://www.ietf.org/rfc/rfc1928.txt" target="_blank" rel="noopener">socks5 rfc</a></p>
+<p><img src="https://qncdn.gfkui.cn/18/4/23wireshark%E5%88%86%E6%9E%90shadowsocks.png" alt="wireshark分析shadowsocks"></p>
+<p>以下的序号为上图左侧的抓包序号。</p>
+<p>7-9 tcp的三次握手</p>
+<p>10 <code>socks5客户端</code>和<code>socks5服务端</code>协商认证阶段</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>VER</th>
+<th>NMETHODS</th>
+<th>METHODS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>data</td>
+<td>05</td>
+<td>01</td>
+<td>00</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>VER</code>表示socks的版本，默认为5</li>
+<li><code>NMETHODS</code>字段是 <code>METHODS</code>字段占用的字节数</li>
+<li><code>METHODS</code>字段的每一个字节表示一种认证方式，表示客户端支持的全部认证方式。</li>
+</ul>
+<p>11 服务端接收到客户端的请求之后，之后将认证方式发送给客户端</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>VER</th>
+<th>METHOD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>data</td>
+<td>05</td>
+<td>00</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>VER</code>表示socks的版本，默认为5</li>
+<li><code>METHOD</code>表示认证的方式，<code>00</code>表示无需用户密码认证</li>
+</ul>
+<p>13 socks5客户端指导<code>shadowsocks</code>连接需要访问的服务器</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>VER</th>
+<th>CMD</th>
+<th>RSV</th>
+<th>ATYP</th>
+<th>DST.ADDR</th>
+<th>DST.PORT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>Variable</td>
+<td>2</td>
+</tr>
+<tr>
+<td>data</td>
+<td>05</td>
+<td>01</td>
+<td>00</td>
+<td>03</td>
+<td>115.114.113.112(已转成ascll)</td>
+<td>0050</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>VER</code>表示socks的版本，默认为5</li>
+<li><code>CMD</code>command的缩写，表示连接的方式<ul>
+<li>0x01：建立 TCP 连接</li>
+<li>0x03：关联 UDP 请求</li>
+</ul>
+</li>
+<li><code>RSV</code>保留字段，值为 0x00</li>
+<li><code>ATYP</code>address type 的缩写，取值为<ul>
+<li>0x01：IPv4</li>
+<li>0x03：域名</li>
+<li>0x04：IPv6</li>
+</ul>
+</li>
+</ul>
+<p>15 当<code>socks5服务端</code>与远程的需要访问的服务器建立连接之后，发送以下数据</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>VER</th>
+<th>REP</th>
+<th>RSV</th>
+<th>ATYP</th>
+<th>DST.ADDR</th>
+<th>DST.PORT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>Variable</td>
+<td>2</td>
+</tr>
+<tr>
+<td>data</td>
+<td>05</td>
+<td>00</td>
+<td>00</td>
+<td>01</td>
+<td>0.0.0.0(已转成ascll)</td>
+<td>0050</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>REP</code>表示返回的连接状态<ul>
+<li>0x00: 连接成功</li>
+<li>其他状态参考<a href="https://tools.ietf.org/html/rfc1928" target="_blank" rel="noopener">rfc1928</a></li>
+</ul>
+</li>
+</ul>
+<p>17 纯正的http的Request Headers</p>
+<p>简单粗暴的tcp发送报文，需要向远程服务器发送什么就发送什么</p>
+<p><img src="https://qncdn.gfkui.cn/18/4/23%E7%BA%AF%E6%AD%A3%E7%9A%84httpheader.png" alt="纯正的http的Request Headers"></p>
+<p>21 纯正的http的接收报文<br>远程服务器向本地发送什么，就返回给<code>socks5客户端</code>什么，也是简单粗暴</p>
+<p>27 由于远程需要访问的服务器断开连接，所以<code>socks5服务端</code>对<code>socks5客户端</code>也断开连接</p>
+<h2 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h2><p>以下就是惊险刺激的源码分析了，目前分析的源码是<a href="https://github.com/shadowsocks/shadowsocks/releases/tag/2.9.1" target="_blank" rel="noopener">shadowsocks2.9.1</a></p>
+<p>因为<code>sslocal</code>与<code>ssserver</code>在写法上比较类似，都是接收数据+转发，所以在这里我们就只分析<code>sslocal</code>。</p>
+<blockquote>
+<p>以下贴出<code>sslocal.py</code>的主要的代码</p>
+</blockquote>
+<pre><code>def main():
+    # 检测Python版本是否支持
+    shell.check_python()
+
+    # 如果是已经将python转为exe文件则进入如下配置
+    if hasattr(sys, &quot;frozen&quot;) and sys.frozen in \
+            (&quot;windows_exe&quot;, &quot;console_exe&quot;):
+        p = os.path.dirname(os.path.abspath(sys.executable))
+        os.chdir(p)
+
+    # 获取配置
+    config = shell.get_config(True)
+
+    if not config.get(&#39;dns_ipv6&#39;, False):
+        asyncdns.IPV6_CONNECTION_SUPPORT = False
+
+    # 守护进程设置
+    daemon.daemon_exec(config)
+
+    try:
+        # 录入日志
+        logging.info(&quot;starting local at %s:%d&quot; %
+                     (config[&#39;local_address&#39;], config[&#39;local_port&#39;]))
+
+        # 生成dns寻址器
+        dns_resolver = asyncdns.DNSResolver()
+
+        # 生成tcp服务器
+        tcp_server = tcprelay.TCPRelay(config, dns_resolver, True)
+
+        # 生成udp服务器
+        udp_server = udprelay.UDPRelay(config, dns_resolver, True)
+
+        # 生成loop循环结构
+        loop = eventloop.EventLoop()
+
+        # 将以上的东西加入进loop循环结构
+        dns_resolver.add_to_loop(loop)
+        tcp_server.add_to_loop(loop)
+        udp_server.add_to_loop(loop)
+
+        def handler(signum, _):
+            logging.warn(&#39;received SIGQUIT, doing graceful shutting down..&#39;)
+            tcp_server.close(next_tick=True)
+            udp_server.close(next_tick=True)
+        signal.signal(getattr(signal, &#39;SIGQUIT&#39;, signal.SIGTERM), handler)
+
+        def int_handler(signum, _):
+            sys.exit(1)
+        signal.signal(signal.SIGINT, int_handler)
+
+        daemon.set_user(config.get(&#39;user&#39;, None))
+
+        # 循环运行
+        loop.run()
+    except Exception as e:
+        shell.print_exception(e)
+        sys.exit(1)
+
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre><p>代码的前半部分都是一些获取配置的，最主要的代码都在<code>try...catch</code>结构中。其中主要的东西有<code>loop循环结构</code>、<code>dns寻址器</code>、<code>tcp服务器</code>、<code>udp服务器</code>。</p>
+<p><code>loop循环结构</code>的代码在<code>eventloop.py</code>中，其中封装了三种IO复用函数<code>epoll</code>、<code>kqueue</code>、<code>select</code>,并且提供了统一的接口。</p>
+<p>初始化<code>dns寻址器</code>的代码在<code>asyncdns.py</code>中，主要作用是生成<code>dns</code>的相关配置</p>
+<p>初始化<code>tcp服务器</code>的代码在<code>tcprelay.py</code>中，主要作用是通过配置文件对ip和端口号进行tcp的监听</p>
+<p>初始化<code>udp服务器</code>的代码在<code>udprelay.py</code>中，主要作用是通过配置文件对ip和端口号进行udp的监听</p>
+<blockquote>
+<p>整个程序通过<code>loop.run()</code>函数对客户端进行监听，具体代码如下</p>
+</blockquote>
+<pre><code>def run(self):
+    events = []
+    while not self._stopping:
+        asap = False
+        try:
+            events = self.poll(TIMEOUT_PRECISION)
+        except (OSError, IOError) as e:
+            if errno_from_exception(e) in (errno.EPIPE, errno.EINTR):
+                # EPIPE: Happens when the client closes the connection
+                # EINTR: Happens when received a signal
+                # handles them as soon as possible
+                asap = True
+                logging.debug(&#39;poll:%s&#39;, e)
+            else:
+                logging.error(&#39;poll:%s&#39;, e)
+                traceback.print_exc()
+                continue
+
+        for sock, fd, event in events:
+            handler = self._fdmap.get(fd, None)
+            if handler is not None:
+                handler = handler[1]
+                try:
+                    handler.handle_event(sock, fd, event)
+                except (OSError, IOError) as e:
+                    shell.print_exception(e)
+        now = time.time()
+        if asap or now - self._last_time &gt;= TIMEOUT_PRECISION:
+            for callback in self._periodic_callbacks:
+                callback()
+            self._last_time = now
+
+</code></pre><p>整个服务器在<code>events = self.poll(TIMEOUT_PRECISION)</code>中进行阻塞对客户端进行监听，如果有客户端连接或者发送信息，则进入<code>for sock, fd, event in events:</code>循环结构。</p>
+<p>当有新的<code>socks5客户端</code>进行访问，先进入<code>tcprelay</code>类的<code>handler.handle_event(sock, fd, event)</code>函数，在这个函数中，判断客户端是否是新连接的，如果为新连接上，则初始化<code>TCPRelayHandler</code>，然后将其加入到<code>eventloop</code>中进行循环监听。</p>
+<blockquote>
+<p>当有已经连接过的<code>socks5客户端</code>发送信息则直接进入<code>TCPRelayHandler</code>的<code>handle_event</code>函数，函数大致如下</p>
+</blockquote>
+<pre><code>def handle_event(self, sock, event):
+    # handle all events in this handler and dispatch them to methods
+    if self._stage == STAGE_DESTROYED:
+        logging.debug(&#39;ignore handle_event: destroyed&#39;)
+        return
+    # order is important
+    if sock == self._remote_sock:
+        if event &amp; eventloop.POLL_ERR:
+            self._on_remote_error()
+            if self._stage == STAGE_DESTROYED:
+                return
+        if event &amp; (eventloop.POLL_IN | eventloop.POLL_HUP):
+            # read remote
+            self._on_remote_read()
+            if self._stage == STAGE_DESTROYED:
+                return
+        if event &amp; eventloop.POLL_OUT:
+            # write remote
+            self._on_remote_write()
+    elif sock == self._local_sock:
+        if event &amp; eventloop.POLL_ERR:
+            self._on_local_error()
+            if self._stage == STAGE_DESTROYED:
+                return
+        if event &amp; (eventloop.POLL_IN | eventloop.POLL_HUP):
+            # read local
+            self._on_local_read()
+            if self._stage == STAGE_DESTROYED:
+                return
+        if event &amp; eventloop.POLL_OUT:
+            # write local
+            self._on_local_write()
+    else:
+        logging.warn(&#39;unknown socket&#39;)
+</code></pre><p>判断<code>event</code>的状态，进入相关的函数</p>
+<ul>
+<li>本地的<code>socks5客户端</code>发送信息，则进入<code>_on_local_read()</code>函数</li>
+<li>需要向本地的<code>socks5客户端</code>发送信息，则进入<code>_on_local_write()</code>函数</li>
+<li>远程的服务器发来信息，则进入<code>_on_remote_read()</code>函数</li>
+<li>需要向远程的服务器发送信息，则进入<code>_on_remote_write()</code>函数</li>
+</ul>
+<blockquote>
+<p>首先我们分析<code>socks5客户端</code>与<code>sslocal</code>的通信</p>
+</blockquote>
+<p>我们进入<code>tcprelay.py</code>然后继续分析<code>_on_local_read()</code>函数</p>
+<p>首先判断本身与<code>socks5客户端</code>的状态，由于初始化是<code>STAGE_INIT</code>状态，即上文的10和11数据包，<code>sslocal</code>随即发送<code>05 00</code>数据包，然后更改状态为<code>STAGE_ADDR</code>，即进入等待连接状态</p>
+<p>当<code>socks5客户端</code>像上文一样发送tcp连接请求时，连接的<code>TCPRelayHandler</code>的状态为<code>STAGE_ADDR</code>，随即进入<code>_handle_stage_addr</code>函数，在此函数中马上发送<code>05 00 00 01 00 00 00 00 10 10</code>给<code>socks5客户端</code>，然后将刚刚收到的连接数据进行加密，保存到<code>data_to_send</code>变量中，接着通过<code>_dns_resolver.resolve(self._chosen_server[0],self._handle_dns_resolved)</code>的回调函数连接远程的<code>ssserver</code>，然后将加密数据发送过去。上述函数是解析<code>ssserver</code>地址并且回调到<code>_handle_dns_resolved</code>函数与<code>ssserver</code>连接，此时的连接状态是<code>STAGE_CONNECTING</code>。</p>
+<p>此时的<code>ssserver</code>已经跟<code>目标服务器连接上了</code>，<code>socks5客户端</code>继续将数据发送给<code>ssserver</code>，此时<code>sslocal</code>进入<code>_handle_stage_connecting</code>函数，将需要发送的数据加密发送给<code>ssserver</code>。</p>
+<blockquote>
+<p>接下来分析<code>sslocal</code>与<code>ssserver</code>的通信</p>
+</blockquote>
+<p>第一次<code>sslocal</code>与<code>ssserver</code>建立通信是在<code>_handle_dns_resolved</code>的回调函数中，从此<code>TCPRelayHandler</code>的<code>remote_sock</code>与<code>local_sock</code>相互绑定，二者互相监听互相通信。</p>
+<p>之后通过<code>_on_remote_read</code>函数接收<code>ssserver</code>发送的数据，然后解密通过<code>_write_to_sock</code>发送给<code>sslocal</code>。</p>
+<p>当<code>ssserver</code>与<code>sslocal</code>断开连接之后，<code>sslocal</code>也会进入<code>_on_remote_read</code>函数，发现没有接收到任何数据，即为关闭连接的状态，随后进入<code>destroy</code>函数断开客户端连接并且销毁自己，这样连接就结束了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>由于还没有仔细弄懂python的语法，所以一开始看python的代码还是感觉挺吃力的，况且<code>shadowsocks</code>的注释很少，都是靠debug和输出内容大概理解作者的思路。阅读源码之前一定要看一下<code>socks5</code>的底层数据原理，还要看一看python的tcp/ip通信的例子，这样才会少走好多弯路。为了巩固代码的理解，顺便为了学习python，我后续会再写一个<code>socks5客户端</code>挂在服务器上面。在之后还会继续分析<code>shadowsocks</code>的<code>udp</code>功能。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://loggerhead.me/posts/shadowsocks-yuan-ma-fen-xi-xie-yi-yu-jie-gou.html" target="_blank" rel="noopener">Shadowsocks 源码分析——协议与结构</a></p>
+<p><a href="https://loggerhead.me/posts/shadowsocks-yuan-ma-fen-xi-tcp-dai-li.html" target="_blank" rel="noopener">Shadowsocks 源码分析——TCP 代理</a></p>
+<p><a href="https://yq.aliyun.com/articles/216135" target="_blank" rel="noopener">计算机网络(一) 走近socks5</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gfkui.com/2018/04/29/shadowsocks客户端源码分析/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//kui-ye-de-hei-zuo-fang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//kui-ye-de-hei-zuo-fang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/06/15/Python实现socket的非阻塞式编程/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/03/30/使用wireshark分析https/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/logo.jpg" alt="WoodyXiong's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        woodyxiong@yahoo.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="maito:woodyxiong@yahoo.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/奇怪的知识/">奇怪的知识<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/探索/">探索<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/游戏体验/">游戏体验<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/研发日志/">研发日志<span class="sidebar_archives-count">20</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">cloud_circle</i>
+                
+                标签云
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间线">
+                
+                    <i class="material-icons sidebar-material-icons">send</i>
+                
+                时间线
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">photo_library</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情链接">
+                
+                    <i class="material-icons sidebar-material-icons">people</i>
+                
+                友情链接
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">36</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/zuosixiaoshenxi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/woodyxiong/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://www.github.com/woodyxiong" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/32123244/#/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/zuosixiaoshenxian" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>魁爷的黑作坊
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?5+2z7ZZmFuZK5IcimlZbxw==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            2018届本科PHP岗校招经历（史上最详细） | 
+        
+        魁爷的黑作坊
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="生活,编程,玩">
+    <meta name="keywords" content="后端,PHP,全栈,Web,自学编程,学习分享,玩,自由,php,学习">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="魁爷的黑作坊">
+    <meta name="msapplication-starturl" content="https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="魁爷的黑作坊">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="MNB77WwXXY">
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="2018届本科PHP岗校招经历（史上最详细） | 魁爷的黑作坊">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="生活,编程,玩">
+    <meta property="og:article:tag" content="php"> <meta property="og:article:tag" content="学习"> 
+
+    
+        <meta property="article:published_time" content="Fri Oct 13 2017 11:58:34 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 22 2020 17:15:28 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/index.html",
+    "headline": "2018届本科PHP岗校招经历（史上最详细）",
+    "datePublished": "Fri Oct 13 2017 11:58:34 GMT+0800",
+    "dateModified": "Sun Nov 22 2020 17:15:28 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "WoodyXiong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/logo.jpg"
+        },
+        "description": "淡泊明志，宁静致远"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "魁爷的黑作坊",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",php,学习后端,PHP,全栈,Web,自学编程,学习分享,玩,自由",
+    "description": "生活,编程,玩",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-71785931-2', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?ef419ee57c7007748e3ffd3f542a9a24';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前期准备"><span class="post-toc-number">2.</span> <span class="post-toc-text">前期准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自己设计一个框架-项目地址"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">自己设计一个框架 项目地址</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#准备简历-简历地址"><span class="post-toc-number">2.0.2.</span> <span class="post-toc-text">准备简历 简历地址</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#笔试阶段"><span class="post-toc-number">3.</span> <span class="post-toc-text">笔试阶段</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第一次面试"><span class="post-toc-number">4.</span> <span class="post-toc-text">第一次面试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#PHP如何防止SQL注入"><span class="post-toc-number">4.0.0.0.1.</span> <span class="post-toc-text">PHP如何防止SQL注入</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#为什么要MVC结构"><span class="post-toc-number">4.0.0.0.2.</span> <span class="post-toc-text">为什么要MVC结构</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第二次面试"><span class="post-toc-number">5.</span> <span class="post-toc-text">第二次面试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#http为什么要用cookie"><span class="post-toc-number">5.0.0.0.1.</span> <span class="post-toc-text">http为什么要用cookie</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#cookie和session的关系"><span class="post-toc-number">5.0.0.0.2.</span> <span class="post-toc-text">cookie和session的关系</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#http的304是代表什么"><span class="post-toc-number">5.0.0.0.3.</span> <span class="post-toc-text">http的304是代表什么</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设计一个多点登录系统（大题）"><span class="post-toc-number">5.0.0.0.4.</span> <span class="post-toc-text">设计一个多点登录系统（大题）</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">6.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#最后想说的"><span class="post-toc-number">7.</span> <span class="post-toc-text">最后想说的</span></a></li>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522420800289&di=32f8ea40bb80e926825a91d721bff8f4&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM00%2F94%2FE1%2FwKioL1kPvIXhDpsoAACXOayk__g084.jpg-wh_651x-s_2718106530.jpg)">
+    
+            <p class="article-headline-p">
+                2018届本科PHP岗校招经历（史上最详细）
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/logo.jpg" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>WoodyXiong</strong>
+        <span>10月 13, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEIUlEQVR42u3aS3LjMAwFQN3/0jMHSNl5AOiUBTVXKUeWqdaC+F3/rGBdCDBhwoQJEyYLEyZMmL6e6YrX+2/9/Dzaytv75Ne/unL0jJgwYcKEaRFT8jDJt3LQV9dUH/XVlQeeERMmTJgwrWPKj+fkkV4R9FCSkCLfW/QtTJgwYcL0YKb8oO1RVsOR5MVgwoQJEyZMVabef/Nia15ozvePCRMmTJiezFRtDVaP9vz4n6TWvcAFEyZMmDDtZqoe0nf8+0/nmzBhwoQJ09cwTdZkjGZS0q3uofl0mDBhwoRpBdOkNZg0O8+ueZKMCRMmTJieyZRsK29PVg/+vOybv7YJLiZMmDBh2sTUO8jzgKB35+aoTXzklwd3MGHChAnTbZmqA6DJNXnJNblDfsBXk+FfBDBhwoQJ0wqmJB3Nf756YFcp3yfJyWvIQwdMmDBhwrSJaXKs5luvHvbVkOXUC8OECRMmTJuY8uSzGkZUD+xJODLha1YIMGHChAnTrZgSguTWyZFcfQF5Sjzh+yX1xYQJEyZMK5gmYUG+lSQISF5YoVwbL0yYMGHCtI8pX6canJ8YBsqvyZupmDBhwoRpB9N8rDPZ1nvi6uPln/dGhTBhwoQJ0yamvKiaH9tVmmqjcZJsF4IbTJgwYcK0gim/RZ589tqi+R0mL6nQ/sSECRMmTIuYziac8/bkgeN8vn9MmDBhwrSIqVeurQ7HfG5gKH/leYKNCRMmTJh2MCVtv+r4Tj760wsseo9dLmRjwoQJE6YHMFWP+Ry9F0Dkrc3DRV5MmDBhwnRbpsnQTDUxroYa1fZndTCoWeTFhAkTJky3YqqWbnsHf16QnaTBycsr7BATJkyYMC1imrQte8M61aChl35Xx3cwYcKECdM+pmprsDea0zvmq4FIngxHwRAmTJgwYVrBdGocZ9LInB/51e9iwoQJE6anMfWGbI4lmePHS0KBvLiMCRMmTJj2MVVHW/KCbN7szIODfEAnSaQxYcKECdOTmfIf6AUKeWm4mr720mZMmDBhwrSPKb91frhOCrX5TnopbqFpigkTJkyYVjD9/c9HWwxKt70CbnJPTJgwYcK0j2mS6ObX58XcvL3aIzjQzsSECRMmTDdhyn8sGY7JCU4NleYhRY6LCRMmTJg2MfUah9XDtXqf3ghOnvomn2PChAkTph1MV7ySJui8dFt9+OSxqwVoTJgwYcK0j6nX2sxLroUmYpxynwoIonYmJkyYMGFawfSJR5qEEXnocLVWsxaOCRMmTJhWM1VTzTx06AUZecszuT8mTJgwYcJUTSCTbfW+m6M3E2lMmDBhwrSOKR+yqSa3k+Jv9ZPeiO3hWjgmTJgwYfoypmpJNDlu87JvXoTtHf/NRB0TJkyYMK1gsqKAwMKECRMmTJgwWZgwYfqW9R+i4u2dsDGjlgAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/php/">php</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/学习/">学习</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=2018届本科PHP岗校招经历（史上最详细）&url=https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/index.html&pic=https://blog.gfkui.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=2018届本科PHP岗校招经历（史上最详细）&url=https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/index.html&via=WoodyXiong" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/index.html&text=2018届本科PHP岗校招经历（史上最详细）" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>有很多同学希望我分享这次校招的经历，而且我在这次校招中感觉收获颇丰，希望分享给大家，希望这篇文章能对大家有所帮助。<br>我大概是八月初开始准备校招的，在十月国庆之后签了offer，历时两个月时间。</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>由于之前是在知乎上偶然得知找工作要在大三暑假就要开始了，当时已经是比较晚了，暑假都过了一半了，所以匆匆开始准备。<br>首先明确目标是我是专门针对PHP（服务器端的语言）的岗位。</p>
+<h3 id="自己设计一个框架-项目地址"><a href="#自己设计一个框架-项目地址" class="headerlink" title="自己设计一个框架 项目地址"></a>自己设计一个框架 <a href="https://github.com/woodyxiong/TinyPHP" target="_blank" rel="noopener">项目地址</a></h3><p>为了自己的能力能够达成进公司的水平，我特意研究了自己经常用的<code>ThinkPHP</code>框架，看看这个框架到底是如何构成MVC架构的，然后框架内部的类是如何进行互相调用的。为了能让别人知道我的成果，所以我仿造这个框架自己写了一个<code>TinyPHP</code>框架，其实写框架并不是特别难，主要是得看懂别人的代码是如何运行的，我用PHP的一些调试的函数一步一步输出内容结果，看不懂的地方还专门去百度那些函数是干什么用的，这样一个很简单的MVC的框架就初步实现了。为了让自己充分吃透这个框架，我还特意增加了一些功能，比如<code>token</code>的验证功能等等。大约在8月15日，框架基本完成。</p>
+<h3 id="准备简历-简历地址"><a href="#准备简历-简历地址" class="headerlink" title="准备简历 简历地址"></a>准备简历 <a href="https://coding.net/u/zuosixiaoshenxian/p/Resume/git" target="_blank" rel="noopener">简历地址</a></h3><p>由于之前做的东西还比较多，包括<code>院网设计</code>、<code>慧眼项目</code>、<code>机械手示教器</code>、<code>机器人视觉</code>等项目，所以简历还算比较丰富，放在<code>coding.net</code>上面看起来不长，打印要4页纸。</p>
+<blockquote>
+<p>简历挺重要的</p>
+</blockquote>
+<ul>
+<li>首先你在校招的话，HR会挑选简历合格的才能参加线上的考试，如果简历不是很理想，可能连笔试的机会都没有。</li>
+<li>如果你顺利进入了面试环节，面试官会主要问你简历上面的项目经历，如果你很会说的话，介绍这些项目就是个非常好的话题，让面试官更加了解你，会让面试进行的更加顺畅。而不是面试官直接问你很多的问题，因为公司的业务场景你可能没有这方面的经验，往往这些问题真的不太容易直接回答对，或者进入手撕代码的环节，那样会比较痛苦。</li>
+</ul>
+<blockquote>
+<p>没有实际的项目经验，如何写简历</p>
+</blockquote>
+<p>大部分人的大学生活可能不会像我这样有机会做那么多的项目，但是我觉得这个其实水分可以很大，你完全可以到网上找一个项目写到简历上，或者问身边的同学有什么实际的项目可以写上去，但是问题是那个项目你必须清楚里面的实现原理，可能不需要实际的代码，但是别人问你的话你要答得出来。</p>
+<h1 id="笔试阶段"><a href="#笔试阶段" class="headerlink" title="笔试阶段"></a>笔试阶段</h1><p>大约在8月17日左右，感觉准备的差不多了，就开始疯狂的投简历，当时正值秋招最火热的时候，今日头条、链家、腾讯的笔试如约而至。<br>当时今日头条的笔试特别搞笑，我为了笔试特地早早的买了一碗炒粉当晚餐，电脑放在家里WIFI信号最好的地方。。。可是没想到当时的考试用的浏览器必须要<strong>谷歌Chrome浏览器</strong>，装了一晚上硬是没有没有装好，所以错过了这场考试。</p>
+<blockquote>
+<p>算法和数据结构很重要</p>
+</blockquote>
+<p>考试的时候发现最后的编程题的水平很有限，基本做不出来，而且算法基础太过薄弱，所以当时没有办法只好狂补算法，一开始直接在网上找资料感觉进度太慢了，常用的排序算法和一些数据结构在网上花很长时间才能看懂，而且完全没有方向。<br>为了减少时间特地买了慕课网的<a href="http://coding.imooc.com/class/82.html" target="_blank" rel="noopener">玩转算法面试</a>，里面的老师讲的十分详细，面试笔试会考的考点都会帮你总结，另外自己还得边看边刷老师推荐的题目，在之后的笔试当中游刃有余，碰到这方面的问题基本上都有思路。这种边刷题边笔试的状态一直持续到9月20日。<br>在此期间笔试了差不多7-8场吧，其中收到了杭州贝贝网的实习邀请和京东的面试邀请。<br>由于我在大四上学期还有课，所以贝贝网的实习就给拒了，只去了京东的面试。</p>
+<h1 id="第一次面试"><a href="#第一次面试" class="headerlink" title="第一次面试"></a>第一次面试</h1><p>准备这次面试，我看了很多PHP岗位的面经，由于PHP岗位的东西要问的不是特别深入，所以在面试前一个星期，我把知识点都准备得差不多了。<br>京东不能远程面试，所以选择了请假去上海面试，来回车费就近1000块。<br>上海的面试是9月23日，在一个四星级的酒店，里面等待面试的人挺多的，还看见了霸面的简历，稍微翻了一下，学校基本上都是985的，感觉压力好大。<br>在酒店签到之后就直接面试了，是在酒店的一个大厅里面，有很多桌子，都是一对一的面试，让我很惊讶的是我的面试官是一个女的，感觉很像李宇春，虽然看起来很干练，但感觉完全不像是写代码的工程师。<br>面试的问题感觉很泛，一开始就稍微介绍了项目经历，由这些项目经历她来提问，稍微写几个还有点印象的问题。</p>
+<h5 id="PHP如何防止SQL注入"><a href="#PHP如何防止SQL注入" class="headerlink" title="PHP如何防止SQL注入"></a>PHP如何防止SQL注入</h5><p>当时听到这个问题特别兴奋，因为感觉特别简单，回到的时候感觉都是想到什么说什么，我当时好像只说到了过滤，感觉答得太简单了，其实还有参数化查询，事物提交，数据备份等等</p>
+<h5 id="为什么要MVC结构"><a href="#为什么要MVC结构" class="headerlink" title="为什么要MVC结构"></a>为什么要MVC结构</h5><p>这个问题网上查询很多类似的问题，就不再解答了。</p>
+<blockquote>
+<p>第一面试经验总结：当面试官真正问你问题的时候，不要直接回答，而应该仔细想一下，在心中打一遍草稿。<br>如果面试官的问题不是很明确，也可以问面试官很多遍，将问题的题目问清楚再回答。</p>
+</blockquote>
+<p>京东面试结果：在官网查询发现状态还是在初试中卡在不动，估计是当备胎中的备胎了，而且跟别人对比了，不是面试未通过的状态，还在上海待了几天，感觉心都凉了。</p>
+<h1 id="第二次面试"><a href="#第二次面试" class="headerlink" title="第二次面试"></a>第二次面试</h1><p>这次是在10月10日晚上厦大的海韵校区做了白山云笔试，当天凌晨就发了第二天10点面试的通知。<br>面试的地点是在厦门软件园二期，提前了半个小时到现场，公司的环境特别好十分喜欢，饮料随便喝，一进门就看见跑步机、桌球等各种各样的设施，而且还有自助的餐厅，中午的饭也是在那里吃的。</p>
+<p>因为有了第一次京东的面试经历，所以这次面试蜜汁自信，期间问了挺多的问题的，还比较详细，基本上所有的问题我都答上来了，下面列举一些印象比较深的问题。</p>
+<h5 id="http为什么要用cookie"><a href="#http为什么要用cookie" class="headerlink" title="http为什么要用cookie"></a>http为什么要用cookie</h5><p>因为http是短连接，无法确定是谁连接的，所以要cookie来验证用户身份，cookie是存储在客户端，session是存储在服务器端</p>
+<h5 id="cookie和session的关系"><a href="#cookie和session的关系" class="headerlink" title="cookie和session的关系"></a>cookie和session的关系</h5><p>在PHP中，session是通过cookie的phpsessionid来获取用户身份</p>
+<h5 id="http的304是代表什么"><a href="#http的304是代表什么" class="headerlink" title="http的304是代表什么"></a>http的304是代表什么</h5><p>这个在面试的时候记得不是特别清楚了，毕竟是cdn厂商，估计跟静态资源有关系，所以猜了一下，后面一查竟然猜对了。<strong>304</strong>是浏览器的资源缓存标识，即用户在第一次访问静态资源的时候服务器返回一个<strong>expire-time</strong>并且状态码是<strong>200</strong>，浏览器会将这个资源缓存起来，在之后的时间内，如果用户在<strong>expire-time</strong>访问的话，浏览器就直接取缓存内容即可，然后http的标识符就是<strong>304</strong>。</p>
+<h5 id="设计一个多点登录系统（大题）"><a href="#设计一个多点登录系统（大题）" class="headerlink" title="设计一个多点登录系统（大题）"></a>设计一个多点登录系统（大题）</h5><blockquote>
+<p>面试官刚开始问问题的时候问题不是那么明确，可能让人摸不着头脑，我不断深入的询问才知道面试官需要问什么东西，这可能也是面试另外一部分的技能，沟通能力。</p>
+</blockquote>
+<p>题目介绍：多点登录类似于用户登录<strong>百度贴吧</strong>、<strong>百度云盘</strong>、<strong>百度知道</strong>三个服务，只需要在<code>passport.baidu.com</code>网页登录即可，介绍实现原理。</p>
+<ol>
+<li>由于之前制作自己的框架的时候对cookie了解比较深入，还了解过跨域访问，所以所以答利用cookie的跨域访问，但是在面试官的一步一步往深处问我就不太清楚了。</li>
+<li>在登录的服务器加一个内存数据库<strong>redis</strong>，里面存储用户的状态，在其他服务器服务的时候，利用PHP发请求给登录服务器的内存数据库<strong>redis</strong>，询问用户是否合法以防止用户伪造用户登录的userid。考官说登录服务器是一个瓶颈，因为所有服务器都要询问登录服务器用户的状态，不通过。</li>
+<li>因为觉得这个问题可能就决定我的去留了吧，所以继续硬着头皮拿着纸想了五六分钟吧，想想才发现最主要的问题是为了防止用户伪造不合法的id，其实这个问题在我之前写框架的时候也遇到过，方法就是在登录浏览器可以明文发送userid，然后再给一个签名，在PHP中的代码是这样。<pre><code>$sign=md5($userid+&quot;salt&quot;);
+</code></pre>我觉得这个方法好像没什么问题，而且是完全自己想到的，面试官笑笑说，这个勉强可以，之后我查了网上的资料，好像大家都是差不多这样实现的。</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>由于本人是双非（非985、211）的二本院校，因为很多工作岗位首先就是注重文凭，例如ofo、小米这样的公司直接写了必须985学生，而且在我们学校完全没有企业来校招宣讲，每次都必须跑到厦门大学蹭宣讲会笔试，所以找到自己理想的工作实属不易。<br>但是有一些企业可能还是看能力吧，所以我觉得大学好不好可能跟学生的学习能力或者是应试的能力有一定的关系，但是在有些时候，公司可能更加注重的是你进来之后能不能做事，有没有项目经验，是不是能跟上公司的进度，而不希望你是死读书的，所以不管是什么大学，在课外还是要多多钻研自己感兴趣的事物。</p>
+<h1 id="最后想说的"><a href="#最后想说的" class="headerlink" title="最后想说的"></a>最后想说的</h1><p>感谢大家能看到最后，最近申请了一个个人博客，以后会发一些文章在博客上面，希望大家有时间可以看看<a href="https://blog.gfkui.cn" target="_blank" rel="noopener">魁爷(grand father kui)</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://blog.gfkui.com/2017/10/13/奇怪的知识/2018届本科PHP岗校招经历（史上最详细）/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//kui-ye-de-hei-zuo-fang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//kui-ye-de-hei-zuo-fang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/11/20/奇怪的知识/Linux系统配置Basler相机驱动（软件触发和硬件触发）OpenCV格式转换/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/logo.jpg" alt="WoodyXiong's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        woodyxiong@yahoo.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="maito:woodyxiong@yahoo.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/奇怪的知识/">奇怪的知识<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/探索/">探索<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/游戏体验/">游戏体验<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/研发日志/">研发日志<span class="sidebar_archives-count">20</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">cloud_circle</i>
+                
+                标签云
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间线">
+                
+                    <i class="material-icons sidebar-material-icons">send</i>
+                
+                时间线
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">photo_library</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情链接">
+                
+                    <i class="material-icons sidebar-material-icons">people</i>
+                
+                友情链接
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">36</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/zuosixiaoshenxi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/woodyxiong/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://www.github.com/woodyxiong" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/32123244/#/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/zuosixiaoshenxian" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>魁爷的黑作坊
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?5+2z7ZZmFuZK5IcimlZbxw==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
